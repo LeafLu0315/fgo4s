@@ -1,0 +1,90 @@
+body{
+	background-color: #999;
+	font-family: Arial,"微軟正黑體";
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#header {
+	margin: 0 auto;
+	width:700px;
+}
+
+#header h1 {
+	display: block;
+	width: 700px;
+	height: 20px;
+	text-align: center;
+}
+
+#nav {
+	width: :700px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+#nav ul {
+	display: inline-block;
+	margin: 10 auto;
+	padding: 0;
+	list-style: none;
+}
+
+#nav li {
+	float: left;
+	list-style-type: none;
+	margin-right: 20px
+}
+
+#footer {
+	margin: 0 auto;
+}
+
+#footer h2 {
+	font-size: 15px;
+	text-align: center;
+}
+
+.btn {
+	text-transform: uppercase;
+	padding: 10px 40px;
+	text-decoration: none;
+	color: #fff;
+	letter-spacing: 1px;
+	display: inline-block;
+}
+
+.btn--primary {
+	background: #000000 ;
+	transition: all .3s;
+}
+
+.btn--primary:hover {
+  background: #2b3033;
+}
+
+.btn--round {
+	border-radius: 20px;
+}
+
+.btn--checked {
+	background: #b03a2e ;
+	transition: all .3s;
+}
+
+.btn--checked:hover {
+  background: #C93E2F;
+}
+
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 700;
+}
