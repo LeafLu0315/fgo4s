@@ -43,6 +43,9 @@
 			   1],
 		"jp": [17, 13, 15, 7, 10,
 			   11, 11, 2, 2, 1,
+			   1],
+		"en":[13, 9, 13, 5, 10,
+		      10, 9, 1, 2, 1,
 			   1]
 	};
 
@@ -106,9 +109,11 @@
 
 		canvas = document.getElementById('canvas');
 		canvas.onclick = onCanvasClick;
-
+		//btn
 		twButton = document.getElementById('tw-button');
 		jpButton = document.getElementById('jp-button');
+		enButton = document.getElementById('en-button');
+		//
 		setButton = document.getElementById('set-button');
 		maskButton = document.getElementById('mask-button');
 		luckyBagButton = document.getElementById('luckyBag-button');
@@ -120,6 +125,8 @@
 				twButton.classList.add('btn--checked');
 				jpButton.classList.remove("btn--checked");
 				jpButton.classList.add('btn--primary');
+				enButton.classList.remove('btn--checked');
+				enButton.classList.add('btn--us');
 				init(1);
 			}
 
@@ -129,6 +136,22 @@
 				country = "jp";
 				jpButton.classList.remove("btn--primary");
 				jpButton.classList.add('btn--checked');
+				twButton.classList.remove("btn--checked");
+				twButton.classList.add('btn--primary');
+				enButton.classList.remove('btn--checked');
+				enButton.classList.add('btn--us');
+				init(1);
+			}
+		};
+		// enBtn
+		enButton.onclick = function(){
+			if (country != "en"){
+				country = "en";
+				enButton.classList.remove('btn--primary');
+				enButton.classList.remove('btn--us');
+				enButton.classList.add('btn--checked');
+				jpButton.classList.add("btn--primary");
+				jpButton.classList.remove('btn--checked');
 				twButton.classList.remove("btn--checked");
 				twButton.classList.add('btn--primary');
 				init(1);
