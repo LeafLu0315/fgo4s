@@ -30,7 +30,7 @@
 	];
 
 	var Marks = [
-		'hiclipart',
+		'kizuna',
 		'heart'
 	];
 
@@ -38,13 +38,13 @@
 		// Saber Archer Lancer Rider Caster
 		// Assassin Berserker Ruler Avenger Alterego
 		// Foreigner Mooncancer
-		"tw": [15, 13, 13, 9, 14,
+		"tw": [15, 13, 14, 9, 14,
 			   13, 11, 3, 2, 3,
 			   1, 1],
 		"jp": [21, 17, 19, 11, 14,
 			   15, 13, 3, 2, 3,
 			   1, 1],
-		"en":[15, 12, 13, 9, 14,
+		"en":[15, 12, 14, 9, 14,
 		      13, 11, 2, 2, 1,
 			   1, 1]
 	};
