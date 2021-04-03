@@ -26,8 +26,8 @@
 		'avenger',			// 仇
 		'alterego',			// 丑
 		'foreigner',		// 外
+		'mooncancer'		// 月
 	];
-	// 'mooncancer'		// 月
 
 	var Marks = [
 		'hiclipart',
@@ -37,16 +37,16 @@
 	var AllCategoryNUM = {
 		// Saber Archer Lancer Rider Caster
 		// Assassin Berserker Ruler Avenger Alterego
-		// Foreigner Mooncancer沒放
-		"tw": [14, 10, 13, 5, 10,
-			   10, 9, 2, 2, 1,
-			   1],
-		"jp": [17, 13, 15, 7, 10,
-			   11, 11, 2, 2, 1,
-			   1],
-		"en":[13, 9, 13, 5, 10,
-		      10, 9, 1, 2, 1,
-			   1]
+		// Foreigner Mooncancer
+		"tw": [15, 12, 13, 8, 14,
+			   13, 11, 3, 2, 3,
+			   1, 1],
+		"jp": [21, 16, 19, 10, 14,
+			   15, 13, 3, 2, 3,
+			   1, 1],
+		"en":[15, 11, 13, 8, 14,
+		      13, 11, 2, 2, 1,
+			   1, 1]
 	};
 
 	//右鍵選單取消,綁定功能
