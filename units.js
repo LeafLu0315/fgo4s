@@ -191,7 +191,8 @@
 
 		canvas.width  = luckyBag ? (Math.max.apply(null,CategoryNUM) + 1) * (CELL_SIZE + col_padding) + caculateField : (Math.max.apply(null,CategoryNUM) + 1) * (CELL_SIZE + col_padding);
 		canvas.height = CategoryLen * (CELL_SIZE + row_padding) + marginTop;
-
+		// 補正值
+		if(canvas.height < 1000) canvas.height = 1000;
 		context = canvas.getContext('2d');
 		context.font = "20px Microsoft JhengHei";
 		context.textBaseline = 'top';
@@ -226,7 +227,7 @@
 
 		context.font = "20px Microsoft JhengHei";
 		context.fillStyle = mask;
-		context.fillText("This image was made by mgneko.github.io, maintained by LeafLu", 190 + marginLeft, canvas.height - 25);
+		context.fillText("This image was made by mgneko, maintained by LeafLu", marginLeft, canvas.height - 25);
 	}
 
 	function drawImage(x, y, image){
