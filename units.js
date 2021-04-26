@@ -192,7 +192,8 @@
 		canvas.width  = luckyBag ? (Math.max.apply(null,CategoryNUM) + 1) * (CELL_SIZE + col_padding) + caculateField : (Math.max.apply(null,CategoryNUM) + 1) * (CELL_SIZE + col_padding);
 		canvas.height = CategoryLen * (CELL_SIZE + row_padding) + marginTop;
 		// 補正值
-		if(canvas.height < 1000) canvas.height = 1000;
+		var h = 1000;
+		if(canvas.height < h) canvas.height = h;
 		context = canvas.getContext('2d');
 		context.font = "20px Microsoft JhengHei";
 		context.textBaseline = 'top';
