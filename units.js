@@ -5,7 +5,7 @@
 	var col_padding = 20;
 	var marginTop = 10;
 	var marginLeft = 10;
-	var country = "tw";
+	var country = "jp";
 	var mode = 0;
 	var luckyBag = 0;
 	var CategoryNum;
