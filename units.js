@@ -38,7 +38,7 @@
 		// Saber Archer Lancer Rider Caster
 		// Assassin Berserker Ruler Avenger Alterego
 		// Foreigner Mooncancer
-		"tw": [15, 13, 14, 9, 14,
+		"tw": [16, 13, 14, 9, 14,
 			   13, 11, 3, 2, 3,
 			   1, 1],
 		"jp": [21, 17, 19, 11, 14,
