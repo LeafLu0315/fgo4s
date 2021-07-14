@@ -5,7 +5,7 @@ var row_padding = 30;
 var col_padding = 20;
 var marginTop = 10;
 var marginLeft = 10;
-var country = "tw";
+var country = "jp";
 var mode = 0;
 var luckyBag = 0;
 var CategoryNum;
@@ -41,7 +41,7 @@ var AllCategoryNUM = {
     "tw": [17, 14, 16, 10, 14,
            14, 11, 3, 2, 3,
             1,  1],
-    "jp": [22, 18, 19, 11, 14,
+    "jp": [22, 18, 20, 11, 14,
            15, 13, 3, 2, 3,
             2,  1],
     "en":[17, 14, 16, 10, 14,
