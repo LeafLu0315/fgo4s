@@ -5,7 +5,7 @@ var row_padding = 30;
 var col_padding = 20;
 var marginTop = 10;
 var marginLeft = 10;
-var country = "jp";
+var country = "tw";
 var mode = 0;
 var luckyBag = 0;
 var CategoryNum;
@@ -38,6 +38,9 @@ var AllCategoryNUM = {
     // Saber Archer Lancer Rider Caster
     // Assassin Berserker Ruler Avenger Alterego
     // Foreigner Mooncancer
+	"max":[20,20,20,20,20,
+	       20,20,20,20,20,
+		   20,20],
     "tw": [17, 14, 16, 10, 14,
            14, 11, 3, 2, 3,
             1,  1],
@@ -114,7 +117,7 @@ var units = [];
 //設定英靈圖
 for (i = 0; i < CategoryLen; i++) {
 	units[i] = [];
-	for (j = 0; j < AllCategoryNUM["jp"][i]; j++) {
+	for (j = 0; j < AllCategoryNUM["max"][i]; j++) {
 		units[i][j] = new Unit("images/" + Category[i] + "/" + (j + 1) + ".jpg");
 	}
 }
@@ -264,11 +267,14 @@ function init(state = 0){
 
 	fillTotalText();
 
-	for(var category = 0; category < CategoryLen; category++){
-		drawImage(0, category, categoryImages[category])
-	}
+	// for(var category = 0; category < CategoryLen; category++){
+	// 	drawImage(0, category, categoryImages[category])
+	// }
 
 	for (i = 0; i < CategoryLen; i++) {
+		if(CategoryNUM[i]>0){
+			drawImage(0, i, categoryImages[i])
+		}
 		for (j = 0; j < CategoryNUM[i]; j++) {
 			drawImage(j + 1, i, units[i][j].image);
 			if(!units[i][j].npLv){
