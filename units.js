@@ -257,6 +257,19 @@ function init(state = 0){
 	canvas.height = CategoryLen * (CELL_SIZE + row_padding) + marginTop;
 	// 補正值
 	canvas.height += 25;
+	base = 1.5;
+	switch(country){
+		case 'jp':
+			canvas.height -= CELL_SIZE * base;
+			break;
+		case 'tw':
+		case 'en':
+			canvas.height -= CELL_SIZE * base;
+			break;
+		default:
+			canvas.height -= CELL_SIZE * base;
+			break;
+	}
 
 	context = canvas.getContext('2d');
 	context.font = "20px Microsoft JhengHei";
