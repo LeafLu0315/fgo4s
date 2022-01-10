@@ -26,7 +26,8 @@ var Category = [
 	'avenger',			// 仇
 	'alterego',			// 丑
 	'foreigner',		// 外
-	'mooncancer'		// 月
+	'mooncancer',		// 月
+	'pretender'			// 偽
 ];
 
 var Marks = [
@@ -37,7 +38,7 @@ var Marks = [
 var AllCategoryNUM = {
     // Saber Archer Lancer Rider Caster
     // Assassin Berserker Ruler Avenger Alterego
-    // Foreigner Mooncancer
+    // Foreigner Mooncancer Pretender
 	"max":[20,20,20,20,20,
 	       20,20,20,20,20,
 		   20,20],
