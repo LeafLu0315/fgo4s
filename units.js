@@ -47,7 +47,7 @@ var AllCategoryNUM = {
             1,  1],
     "jp": [22, 20, 20, 15, 16,
            15, 14, 4, 3, 3,
-            2,  1],
+            2,  1, 1],
     "en":[17, 16, 16, 10, 14,
           14, 11, 3, 2, 3,
            1,  1],
@@ -260,7 +260,7 @@ function init(state = 0){
 	base = 1.5;
 	switch(country){
 		case 'jp':
-			canvas.height -= CELL_SIZE * base;
+			// canvas.height -= CELL_SIZE * base;
 			break;
 		case 'tw':
 		case 'en':
