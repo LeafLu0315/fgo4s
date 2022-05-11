@@ -51,7 +51,9 @@ var AllCategoryNUM = {
     "en":[17, 16, 16, 10, 14,
           14, 11, 3, 2, 3,
            1,  1],
-    "z":[12,7,10,4,8,8,8,1,2,0,0,0]
+    "z":[14,8,12,5,8,
+		 8,8,1,2,0,
+		 0,0,1]
 };
 // 福袋代號
 /*模板:
@@ -68,18 +70,19 @@ var lucky= {saber:[],
 			mooncancer:[],
 			foreigner:[]};
 */
-var Z = {saber:[2,9,4,5,10,14,3,12,6,16,7,15],
-	archer:[10,13,3,1,7,12,4],
-	lancer:[2,7,1,14,11,10,3,8,4,12],
-	rider:[5,4,1,2],
-	caster:[4,10,9,6,3,7,13,2],
-	assassin:[9,5,3,10,13,6,1,7],
-	berserker:[11,7,8,3,4,5,1,2],
+var Z = {saber:[2,9,4,5,10,14,3,22,12,6,16,7,15,20],
+	archer:[13,3,1,7,12,20,10,4,18],
+	lancer:[2,7,1,17,14,11,20,10,3,8,4,12],
+	rider:[5,4,15,1,2],
+	caster:[4,9,10,13,6,3,7,2],
+	assassin:[5,6,3,10,13,1,7,9],
+	berserker:[11,7,3,4,5,1,8,2],
 	ruler:[3],
 	avenger:[1,2],
 	alterego:[],
 	mooncancer:[],
-	foreigner:[]
+	foreigner:[],
+	pretender:[1]
 	};
 
 //右鍵選單取消,綁定功能
@@ -265,6 +268,9 @@ function init(state = 0){
 		case 'tw':
 		case 'en':
 			canvas.height -= CELL_SIZE * base;
+			break;
+		case 'z':
+			canvas.height += CELL_SIZE * base * 0.1;
 			break;
 		default:
 			canvas.height -= CELL_SIZE * base;
