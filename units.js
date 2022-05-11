@@ -270,7 +270,7 @@ function init(state = 0){
 			canvas.height -= CELL_SIZE * base;
 			break;
 		case 'z':
-			canvas.height += CELL_SIZE * base * 0.1;
+			canvas.height += CELL_SIZE * base * 0.1 ;
 			break;
 		default:
 			canvas.height -= CELL_SIZE * base;
