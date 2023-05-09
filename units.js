@@ -142,17 +142,18 @@ function getUnit(country){
 		if(country == 'jp' || country == 'tw'){
 			for (j = 0; j < servents[Category[i]].length; j++) {
 				no = getNo(servents,i,j);
-				units[i][j] = svt[no];
+				units[i][j] = { ...svt[no] };
 			}
 		}
 		// 四星自選(含故事限)
 		else if(country == 'z'){
 			for(j = 0; j< AllCategoryNUM[country][i]; j++){
 				no = getNo(z,i,j);
-				units[i][j] = svt[no];
+				units[i][j] = { ...svt[no] };
 			}
 		}
 	}
+	addUnitsNo(units);
 	return units;
 }
 
@@ -197,6 +198,7 @@ function init(state = 0){
 	CategoryNUM = Array.from(AllCategoryNUM[country]);
 	units = getUnit(country);
 
+	window.sessionStorage.setItem("r_country", country);
 	canvas = document.getElementById('canvas');
 	canvas.onclick = onCanvasClick;
 	// 台GO 日GO
@@ -277,6 +279,7 @@ function init(state = 0){
 	};
 
 	resetButton.onclick = function(){
+		deleteData(FGO_STORAGE);
 		window.sessionStorage.setItem("r_country", country);
 		location.reload();
 	}
@@ -318,31 +321,33 @@ function init(state = 0){
 	var pass = 0;
 	counter = 0;
 
-	function getImgNo(images, target){
-		for (var i = 0; i < images.length; i++){
-			if(target == images[i])
-				return i;
-		}
-		return 0;
-	}
+	// function getImgNo(images, target){
+	// 	for (var i = 0; i < images.length; i++){
+	// 		if(target == images[i])
+	// 			return i;
+	// 	}
+	// 	return 0;
+	// }
 
-	function getImg(country){
-		arr = [];
-		switch(country){
-			case "newyear_23_up":
-				arr = [1,1,2,2,3,3,4,4,5,5];
-				return arr;
-			case "newyear_23_down":
-				arr = [6,6,7,7,99,99,99,99,99,99];
-				return arr;
-			case "sixth":
-				return 666;
-		}
-		return arr;
-	}
+	// function getImg(country){
+	// 	arr = [];
+	// 	switch(country){
+	// 		case "newyear_23_up":
+	// 			arr = [1,1,2,2,3,3,4,4,5,5];
+	// 			return arr;
+	// 		case "newyear_23_down":
+	// 			arr = [6,6,7,7,99,99,99,99,99,99];
+	// 			return arr;
+	// 		case "sixth":
+	// 			return 666;
+	// 	}
+	// 	return arr;
+	// }
 
-	arr = getImg(country);
+	// arr = getImg(country);
 
+	updateUnitsNPLevel(units);
+	fillTotalText();
 	for (i = 0; i < CategoryLen; i++) {
 		// needs to maintain the click event if empty class occurs
 		if(CategoryNUM[i]>0){
@@ -638,6 +643,7 @@ function rightClick(event){
 			break;
 		}
 	}
+	updateData(units);
 }
 
 function onCanvasClick(event){
@@ -693,6 +699,7 @@ function onCanvasClick(event){
 			break;
 		}
 	}
+	updateData(units);
 }
 
 function openImage(){
