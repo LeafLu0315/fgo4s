@@ -28,7 +28,7 @@ var servents = {
 	'ruler': [135, 233, 242, 320, 364],
 	'avenger': [147, 158, 328, 356, 388],
 	'alterego': [164, 190, 191, 338],
-	'foreigner': [222, 308],
+	'foreigner': [222, 308, 389],
 	'mooncancer': [166],
 	'pretender': [335, 367, 372]
 }
