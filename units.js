@@ -336,6 +336,7 @@ function init(state = 0){
 		case 'jp':
 			break;
 		case 'z':
+		case 'z2':
 			canvas.height += CELL_SIZE * 1.5;
 		// 少偽職
 		default:
