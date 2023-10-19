@@ -58,9 +58,9 @@ var AllCategoryNUM = {
 		15, 16, 15, 14,
 		4, 3, 3, 2, 1, 0],
 	// 自選
-	// "z":  [14, 9, 12, 5, 8, 8, 8, 1, 2, 0, 0, 0, 1],
+	"z":  [14, 9, 12, 5, 8, 8, 8, 1, 2, 0, 0, 0, 1],
 	// 3000days
-	"z": [21, 16, 17, 10, 13, 11, 13, 2, 3, 1, 1, 0, 1]
+	"z2": [21, 16, 17, 10, 13, 11, 13, 2, 3, 1, 1, 0, 1]
 }
 /* 版型
 var foo =
@@ -78,18 +78,18 @@ foreigner:[],
 mooncancer:[],
 pretender:[]};
 */
-// var z = {saber:[3, 123, 6, 10, 165, 223, 5, 310, 187, 101, 245, 121, 227, 298],
-// 		archer:[248, 14, 11, 157, 207, 325, 184, 122, 311],
-// 		lancer:[78, 140, 18, 279, 228, 193, 313, 183, 87, 146, 102, 214],
-// 		rider:[94, 66, 332, 29, 30],
-// 		caster:[100, 145, 192, 194, 103, 74, 120, 67],
-// 		assassin:[109, 159, 46, 188, 230, 41, 170, 185],
-// 		berserker:[202, 116, 58, 82, 89, 47, 171, 48],
-// 		ruler:[242],
-// 		avenger:[147, 158],
-// 		pretender:[335]};
+var z = {saber:[3, 123, 6, 10, 165, 223, 5, 310, 187, 101, 245, 121, 227, 298],
+		archer:[248, 14, 11, 157, 207, 325, 184, 122, 311],
+		lancer:[78, 140, 18, 279, 228, 193, 313, 183, 87, 146, 102, 214],
+		rider:[94, 66, 332, 29, 30],
+		caster:[100, 145, 192, 194, 103, 74, 120, 67],
+		assassin:[109, 159, 46, 188, 230, 41, 170, 185],
+		berserker:[202, 116, 58, 82, 89, 47, 171, 48],
+		ruler:[242],
+		avenger:[147, 158],
+		pretender:[335]};
 
-var z = {
+var z2 = {
 	saber:[6, 10, 165, 223, 101, 245, 121, 227, 344, 298, 3, 123, 5, 310, 187, 354, 293, 221, 290, 176, 363],
 	archer:[14, 11, 207, 325, 184, 248, 157, 122, 311, 200, 318, 131, 286, 180, 262, 269],
 	lancer:[140, 18, 228, 193, 313, 183, 87, 146, 214, 78, 279, 347, 102, 217, 134, 266, 181],
@@ -168,6 +168,12 @@ function getUnit(country){
 				units[i][j] = { ...svt[no] };
 			}
 		}
+		else if(country == 'z2'){
+			for(j = 0; j< AllCategoryNUM[country][i]; j++){
+				no = getNo(z2,i,j);
+				units[i][j] = { ...svt[no] };
+			}
+		}
 	}
 	addUnitsNo(units);
 	return units;
@@ -180,6 +186,8 @@ function getCheckedBtn(country){
 		return twButton;
 	if(country == 'z')
 		return zButton;
+	if(country == 'z2')
+		return z2Button;
 	return twButton;
 }
 
@@ -224,6 +232,8 @@ function init(state = 0){
 	// 自選
 	zButton = document.getElementById('z-button');
 	btns.push(zButton);
+	z2Button = document.getElementById('z2-button');
+	btns.push(z2Button);
 	Checked(btns, getCheckedBtn(country));
 	// 中間欄
 	setButton = document.getElementById('set-button');
@@ -262,6 +272,13 @@ function init(state = 0){
 	zButton.onclick = function(){
 		if(country != "z"){
 			country = "z";
+			init(1);
+		}
+	};
+
+	z2Button.onclick = function(){
+		if(country != "z2"){
+			country = "z2";
 			init(1);
 		}
 	};
@@ -367,7 +384,7 @@ function init(state = 0){
 	for (i = 0; i < CategoryLen; i++) {
 		// needs to maintain the click event if empty class occurs
 		if(CategoryNUM[i]>0){
-			if(country == 'jp' || country == 'tw' || country == 'z'){
+			if(country == 'jp' || country == 'tw' || country == 'z' || country == 'z2'){
 				drawImage(0, i-pass, categoryImages[i]);
 			}
 			else if(country == 'newyear_23_up' || country == 'newyear_23_down'){
