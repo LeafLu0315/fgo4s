@@ -330,6 +330,7 @@ function init(state = 0){
 				}
 			}
 		}
+		window.sessionStorage.setItem("r_country", country);
 		location.reload();
 	}
 
