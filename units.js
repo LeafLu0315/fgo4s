@@ -56,7 +56,7 @@ var AllCategoryNUM = {
 	// 台服
 	"tw": [22, 20, 20,
 		15, 16, 15, 14,
-		4, 3, 3, 2, 1, 0],
+		4, 3, 3, 2, 1, 1],
 	// 自選
 	"z":  [14, 9, 12, 5, 8, 8, 8, 1, 2, 0, 0, 0, 1],
 	// 3000days
@@ -351,6 +351,7 @@ function init(state = 0){
 	canvas.height += CELL_SIZE * 0.5;
 	switch(country){
 		case 'jp':
+		case 'tw':
 			break;
 		case 'z':
 		case 'z2':
