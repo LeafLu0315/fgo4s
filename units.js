@@ -29,7 +29,7 @@ var servents = {
 	'avenger': [147, 158, 328, 356, 388, 420],
 	'alterego': [164, 190, 191, 338],
 	'foreigner': [222, 308, 389, 423],
-	'mooncancer': [166, 422],
+	'mooncancer': [166, 422, 424, 425],
 	'pretender': [335, 367, 372, 392, 410]
 }
 
