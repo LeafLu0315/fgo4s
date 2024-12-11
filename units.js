@@ -30,7 +30,7 @@ var servents = {
 	'alterego': [164, 190, 191, 338],
 	'foreigner': [222, 308, 389, 423],
 	'mooncancer': [166, 422, 424, 425],
-	'pretender': [335, 367, 372, 392, 410]
+	'pretender': [335, 367, 372, 392, 410, 430]
 }
 
 var Category = [
