@@ -10,12 +10,6 @@
 		<link rel="stylesheet" type="text/css" href="main.css" />
 		<script type="text/javascript" charset="UTF-8" src="./module/fgoStorage.js"></script>
 		<script type="text/javascript" charset="UTF-8" src="units.js"></script>
-		<script>
-			function onAccountChange(select) {
-			switchAccount(select.value);
-			location.reload(); // Refresh the page to load data for the selected account
-		  	}
-		</script>
 	</head>
 	<body onload="javascript:init();" style="margin:0px;">
 		<div id="header">
@@ -23,7 +17,7 @@
 		</div>
 		<div id="nav">
 			<ul>
-				<li><a id="switch-account-btn" class="btn btn--primary btn--round" onclick="switchAccount();">切換帳號</a></li>
+				<li><a id="switch-account-btn" class="btn btn--primary btn--round" onclick="switchAccount();" style="color: #ff1900;">切換帳號</a></li>
 				<li><a id="tw-button" class="btn btn--primary btn--round" href="javascript:void(0);">台GO</a></li>
 				<li><a id="jp-button" class="btn btn--primary btn--round" href="javascript:void(0);">日GO</a></li>
 				<li><a id="z-button" class="btn btn--primary btn--round" href="javascript:void(0);">四星自選(2500DL)</a></li>
