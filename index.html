@@ -10,6 +10,12 @@
 		<link rel="stylesheet" type="text/css" href="main.css" />
 		<script type="text/javascript" charset="UTF-8" src="./module/fgoStorage.js"></script>
 		<script type="text/javascript" charset="UTF-8" src="units.js"></script>
+		<script>
+			function onAccountChange(select) {
+			switchAccount(select.value);
+			location.reload(); // Refresh the page to load data for the selected account
+		  	}
+		</script>
 	</head>
 	<body onload="javascript:init();" style="margin:0px;">
 		<div id="header">

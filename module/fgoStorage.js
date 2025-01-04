@@ -1,11 +1,6 @@
 var FGO_STORAGE = "FGO_Storage";
 var ACCOUNT_KEY = "FGO_Account";
 
-function onAccountChange(select) {
-  switchAccount(select.value);
-  location.reload(); // Refresh the page to load data for the selected account
-}
-
 function getCurrentAccount() {
   const account = localStorage.getItem(ACCOUNT_KEY);
   return account ? account : "account1"; // Default to account1
