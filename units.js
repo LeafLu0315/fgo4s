@@ -5,7 +5,7 @@ var row_padding = 30;
 var col_padding = 20;
 var marginTop = 10;
 var marginLeft = 10;
-var country = window.sessionStorage.getItem("r_country") == null ? "tw" : window.sessionStorage.getItem("r_country");
+var country = window.sessionStorage.getItem("r4_country") == null ? "tw" : window.sessionStorage.getItem("r4_country");
 var mode = 0;
 var luckyBag = 0;
 var CategoryNum;
@@ -222,7 +222,7 @@ function init(state = 0){
 	CategoryNUM = Array.from(AllCategoryNUM[country]);
 	units = getUnit(country);
 
-	window.sessionStorage.setItem("r_country", country);
+	window.sessionStorage.setItem("r4_country", country);
 	canvas = document.getElementById('canvas');
 	canvas.onclick = onCanvasClick;
 	// 台GO 日GO
@@ -314,7 +314,7 @@ function init(state = 0){
 
 	resetButton.onclick = function(){
 		deleteData(FGO_STORAGE);
-		window.sessionStorage.setItem("r_country", country);
+		window.sessionStorage.setItem("r4_country", country);
 		location.reload();
 	}
 
@@ -330,7 +330,7 @@ function init(state = 0){
 				}
 			}
 		}
-		window.sessionStorage.setItem("r_country", country);
+		window.sessionStorage.setItem("r4_country", country);
 		location.reload();
 	}
 
