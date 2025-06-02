@@ -54,9 +54,9 @@ var AllCategoryNUM = {
 	servents['rider'].length, servents['caster'].length, servents['assassin'].length, servents['berserker'].length,
 	servents['ruler'].length, servents['avenger'].length, servents['alterego'].length, servents['foreigner'].length, servents['mooncancer'].length, servents['pretender'].length],
 	// 台服
-	"tw": [26, 20, 21,
-		16, 18, 19, 16,
-		5, 4, 4, 2, 1, 3],
+	"tw": [26, 21, 21,
+		17, 18, 19, 16,
+		5, 5, 4, 3, 1, 4],
 	// 自選
 	"z":  [14, 9, 12, 5, 8, 8, 8, 1, 2, 0, 0, 0, 1],
 	// 3000days
