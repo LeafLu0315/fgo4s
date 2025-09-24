@@ -32,7 +32,7 @@ function updateData(units) {
 
 // 遷移舊版 fgoStorage.js 的資料，只在需要時執行
 function migrateOldData() {
-    const oldDataKey = "FGO_Storage"; // 舊的五星版本鍵值，這裡可能需要確認是否真的要從五星遷移
+    const oldDataKey = "FGO_Storage_4S"; // 舊的五星版本鍵值，這裡可能需要確認是否真的要從五星遷移
     const oldData = localStorage.getItem(oldDataKey);
     // 確保只在四星帳號1為空，且舊資料存在時遷移
     if (oldData && !localStorage.getItem(`${FGO_STORAGE}_account1`)) {
