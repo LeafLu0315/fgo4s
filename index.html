@@ -18,6 +18,11 @@
 		<div id="nav">
 			<ul>
 				<li><a id="switch-account-btn" class="btn btn--primary btn--round" onclick="switchAccount();" style="color: #ff1900;">切換帳號</a></li>
+				<li><a id="import-button" class="btn btn--primary btn--round" href="javascript:void(0);">匯入資料</a></li>
+				<li><a id="export-button" class="btn btn--primary btn--round" href="javascript:void(0);">匯出資料</a></li>
+				<input type="file" id="import-file" accept=".json" style="display: none;">
+			</ul>
+			<ul>
 				<li><a id="tw-button" class="btn btn--primary btn--round" href="javascript:void(0);">台GO</a></li>
 				<li><a id="jp-button" class="btn btn--primary btn--round" href="javascript:void(0);">日GO</a></li>
 				<li><a id="z-button" class="btn btn--primary btn--round" href="javascript:void(0);">四星自選(2500DL)</a></li>
@@ -35,14 +40,15 @@
 		</div>
 		<canvas id="canvas" width="0" height="0" align="center"></canvas>
 		<div id="footer">
-			<h2>Copyright © 2020 by mgneko, maintained by LeafLu © 2025 ver 3.0</h2>
+			<h2>Copyright © 2020 by mgneko, maintained by LeafLu © 2025 ver 3.1</h2>
 			<h2>
 				<a href="https://leaflu0315.github.io/fgo/">FGO持有五星英靈一覽表</a>
 				更新紀錄:
 				<a href = "https://www.ptt.cc/bbs/FATE_GO/M.1617351416.A.C73.html">#1WPjBunp (FATE_GO)</a>
 				問題回報: <a href="https://forms.gle/78p1Luysj2qoMEts5" target="_blank">表單</a>
 			</h2>
-			<h2><p style="color:blue;">最近更新: 按鈕響應式設計、切換帳號功能</p></h2>
+			<h2><p style="color:blue;">最近更新: 新增匯入匯出功能</p></h2>
 		</div>
 	</body>
 </html>
+
