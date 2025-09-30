@@ -105,7 +105,7 @@ const z2_servants = {
 const FGO_DATA = {
     'jp': {servants: servents, type: 'full', isReleased: true, labelKey: 'jp_label'},
 	// 台服數量增加變動                                                              [劍, 弓, 槍, 騎, 術, 殺, 狂, 裁, 仇, 丑, 外, 月, 偽, 獸, 非獸, 盾]
-    'tw': {servants: servents, type: 'full', isReleased: true, categoryNumOverride: [26, 22, 21, 17, 18, 19, 17, 5, 5, 4, 3, 1, 4], labelKey: 'tw_label'},
+    'tw': {servants: servents, type: 'full', isReleased: true, categoryNumOverride: [26, 22, 21, 18, 18, 19, 17, 5, 5, 4, 3, 1, 4], labelKey: 'tw_label'},
     'z': {servants: z_servants, type: 'partial', isReleased: false, categoryNumOverride: [14, 9, 12, 5, 8, 8, 8, 1, 2, 0, 0, 0, 1], labelKey: 'z_label'},
     'z2': {servants: z2_servants, type: 'partial', isReleased: true, categoryNumOverride: [21, 16, 17, 10, 13, 11, 13, 2, 3, 1, 1, 0, 1], labelKey: 'z2_label'},
 };
