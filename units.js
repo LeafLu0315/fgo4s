@@ -443,11 +443,21 @@ function fillTotalText() {
     context.textAlign = 'left';
     context.fillStyle = font_color;
     const xPos = boxX + 10;
+
+    // 明確設定文字基準線為 'top'
+    // 確保文字繪製在 context.fillRect 清除的區域內
+    context.textBaseline = 'top';
+
     context.fillText(`${i18n.totalOwned[currentLang]}: ${totalHave}/${total}`, xPos, boxY + 10);
     context.fillText(`${i18n.ownedRate[currentLang]}: ${percent.toFixed(2)}%`, xPos, boxY + 35);
     context.fillText(`${i18n.totalNPLevel[currentLang]}: ${totalNP}`, xPos, boxY + 60);
+
+    // 將設定還原，避免影響其他函式
     context.textAlign = 'start';
+    context.textBaseline = 'alphabetic';
+    // ----- 【還原設定結束】 -----
 }
+
 
 function getCoordinates(e){ const rect = e.target.getBoundingClientRect(); const scaleX = canvas.width / rect.width; const scaleY = canvas.height / rect.height; return {'x': (e.clientX - rect.left) * scaleX, 'y': (e.clientY - rect.top) * scaleY}; }
 function getCategory(y){ return Math.floor((y - marginTop) / (CELL_SIZE + row_padding)); }

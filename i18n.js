@@ -74,9 +74,9 @@ const i18n = {
         "en": "Report Issue"
     },
     latestUpdate: {
-        "zh-TW": "最近更新: 新增匯入匯出功能、程式碼重構",
-        "ja": "最近の更新: インポート・エクスポート機能追加、コードリファクタリング",
-        "en": "Recent Updates: Added Import & Export feature & Code Refactoring"
+        "zh-TW": "最近更新: 修正殘影問體",
+        "ja": "最近の更新: 影の問題を修正",
+        "en": "Recent Updates: Fixed Shadow Issue"
     },
     // Mode Button Labels
     jp_label: { "zh-TW": "日GO", "ja": "日GO", "en": "JP Server" },
