@@ -69,7 +69,7 @@ const servents = {
 	'assassin': [41, 46, 92, 109, 133, 159, 170, 177, 185, 188, 218, 230, 243, 267, 304, 359, 360, 361, 378, 408],
 	'berserker': [47, 48, 58, 82, 89, 116, 162, 171, 178, 202, 219, 282, 287, 323, 345, 382, 398, 414, 447],
 	'ruler': [135, 233, 242, 320, 364],
-	'avenger': [147, 158, 328, 356, 388, 420, 454],
+	'avenger': [147, 158, 328, 356, 388, 420, 454, 458],
 	'alterego': [164, 190, 191, 338, 451],
 	'foreigner': [222, 308, 389, 423],
 	'mooncancer': [166, 422, 424, 425],
@@ -105,7 +105,7 @@ const z2_servants = {
 const FGO_DATA = {
     'jp': {servants: servents, type: 'full', isReleased: true, labelKey: 'jp_label'},
 	// 台服數量增加變動                                                              [劍, 弓, 槍, 騎, 術, 殺, 狂, 裁, 仇, 丑, 外, 月, 偽, 獸, 非獸, 盾]
-    'tw': {servants: servents, type: 'full', isReleased: true, categoryNumOverride: [26, 22, 21, 18, 18, 19, 17, 5, 5, 4, 3, 1, 4], labelKey: 'tw_label'},
+    'tw': {servants: servents, type: 'full', isReleased: true, categoryNumOverride: [27, 22, 21, 18, 19, 19, 17, 5, 5, 4, 3, 1, 4], labelKey: 'tw_label'},
     'z': {servants: z_servants, type: 'partial', isReleased: false, categoryNumOverride: [14, 9, 12, 5, 8, 8, 8, 1, 2, 0, 0, 0, 1], labelKey: 'z_label'},
     'z2': {servants: z2_servants, type: 'partial', isReleased: true, categoryNumOverride: [21, 16, 17, 10, 13, 11, 13, 2, 3, 1, 1, 0, 1], labelKey: 'z2_label'},
 };
