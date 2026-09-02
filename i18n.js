@@ -127,8 +127,7 @@ const i18n = {
     jp_label: { "zh-TW": "日GO", "ja": "日GO", "en": "JP Server" },
     tw_label: { "zh-TW": "台GO", "ja": "台GO", "en": "TW Server" },
     z_label: { "zh-TW": "四星自選(2500DL)", "ja": "星4選択(2500DL)", "en": "SR Ticket (25M DL)" },
-    z2_label: { "zh-TW": "四星自選(至3000DL)", "ja": "星4選択(3000DL)", "en": "SR Ticket (30M DL)" },
-
+    z2_label: { "zh-TW": "四星自選(至3500DL)", "ja": "星4選択(3500DL)", "en": "SR Ticket (35M DL)" },
     // Canvas Dynamic Text
     npLevelPrefix: { "zh-TW": "寶", "ja": "宝具", "en": "NP" },
     expectNew: { "zh-TW": "新", "ja": "新", "en": "New" },
